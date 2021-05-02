@@ -6,7 +6,7 @@ Practicing The Basics of Vanilla JS with Nomad Coders
 
 #Javascript #HTML #CSS #Not Responsive
 
-Finished : 2021.04.04
+Finished : 2021.04.04   
 Modified : 2021.05.02
 
 ## Requirements
