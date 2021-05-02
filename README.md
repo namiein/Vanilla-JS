@@ -4,7 +4,7 @@ Practicing The Basics of Vanilla JS with Nomad Coders
 
 [바닐라JS로 크롬 앱 만들기](https://nomadcoders.co/javascript-for-beginners/lobby "vanilla-js")
 
-#Javascript #HTML #CSS
+#Javascript #HTML #CSS #Not Responsive
 
 Finished : 2021.04.04
 Modified : 2021.05.02
