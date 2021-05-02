@@ -16,7 +16,7 @@ h4 {
 
 body {
     height: 100vh;
-    background-color: #fafafa;
+    background-color: #000000;
     color: #000000;
 }
 
@@ -24,18 +24,111 @@ ul {
     list-style-type: none;
 }
 
+#root {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@keyframes scale {
+    0% {
+        transform: none;
+    }
+
+    25% {
+        transform: scaleY(1);
+    }
+
+    50% {
+        transform: scaleY(3);
+    }
+
+    75% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: none;
+    }
+}
+
+@keyframes hideLoadingScreen {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.loading-bars {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    animation: hideLoadingScreen 0.5s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+.loading-bars div {
+    width: 20px;
+    height: 70px;
+    background-color: white;
+    animation: scale ease-in-out 1.2s infinite;
+}
+
+.loading-bars div:first-child {
+    animation-delay: 0.1s;
+}
+
+.loading-bars div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-bars div:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.loading-bars div:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.loading-bars div:last-child {
+    animation-delay: 0.5s;
+}
+
 main {
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.content {
+    width: 80%;
+    padding: 20px;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0.5;
+    color: white;
+    background: black;
+    border-radius: 25px;
 }
 
 h1 {
-    font-size: 100px;
     margin: 50px 0;
+    font-size: 100px;
 }
 
 h4 {
@@ -47,55 +140,75 @@ h4 {
     text-transform: uppercase;
 }
 
+.js-weather {
+    width: 100%;
+    text-align: right;
+    text-transform: uppercase;
+    color: hotpink;
+    font-weight: 900;
+}
+
+.js-clock {
+    margin-top: -50px;
+}
+
 .js-form {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
 }
 
 .js-form input {
     width: 500px;
+    height: 100px;
     border: none;
     border-radius: 4px;
-    height: 100px;
+    color: white;
     font-size: 50px;
+    font-weight: 600;
     text-align: center;
     outline: none;
-    font-weight: 600;
     background: transparent;
     border-bottom: 10px dotted#333333;
-    color: #333333;
 }
 
 .js-toDoForm {
+    width: 100%;
+    padding: 70px 0 30px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    width: 100%;
-    padding: 70px 0 30px;
 }
 
 .js-toDoForm input {
     width: 500px;
     border: none;
-    background: transparent;
-    text-align: center;
     outline: none;
+    color: white;
     font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    background: transparent;
 }
 
 .js-toDoList {
     width: 100%;
-    justify-content: center;
-    align-items: center;
+    height: 100px;
+    overflow-y: scroll;
     display: flex;
+    align-items: center;
+    justify-content: flex-start;
     flex-direction: column;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .js-toDoList button {
-    background-color: transparent;
     border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
 }
 
 .btn {
@@ -115,15 +228,6 @@ h4 {
     display: flex;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 0.5;
-    }
-}
-
 .bgImage {
     position: absolute;
     top: 0;
@@ -131,5 +235,18 @@ h4 {
     z-index: -1;
     width: 100%;
     height: 100%;
-    animation: fadeIn 0.5s linear forwards;
+}
+
+.downloaded-img-attribution {
+    align-self: flex-end;
+    margin: 20px 0 0 20px;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 25px;
+    background: #00000080;
+}
+
+.downloaded-img-attribution a {
+    text-decoration: none;
+    color: aqua;
 }

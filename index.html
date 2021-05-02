@@ -5,26 +5,39 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="index.css" />
-        <title>Document</title>
+        <title>Vanilla JS - TodoList</title>
     </head>
     <body>
-        <main>
-            <div class="js-clock">
-                <h1 class="js-title"></h1>
+        <div id="root">
+            <div class="loading-bars showing">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
-            <form novalidate autocomplete="off" class="js-form form">
-                <input name="userName" type="text" placeholder="Who Are You?" />
-            </form>
-            <h4 class="js-greetings greetings"></h4>
-            <form class="js-toDoForm">
-                <input type="text" placeholder="What is Your Plan?" />
-            </form>
-            <ul class="js-toDoList"></ul>
-        </main>
+            <main>
+                <div class="content">
+                    <div class="js-weather"></div>
+                    <div class="js-clock">
+                        <h1 class="js-title"></h1>
+                    </div>
+                    <form novalidate autocomplete="off" class="js-form form">
+                        <input name="userName" type="text" placeholder="Who Are You?" />
+                    </form>
+                    <h4 class="js-greetings greetings"></h4>
+                    <form class="js-toDoForm">
+                        <input type="text" placeholder="What is Your Plan?" />
+                    </form>
+                    <ul class="js-toDoList"></ul>
+                </div>
+            </main>
+        </div>
 
         <script src="js/clock.js"></script>
         <script src="js/greetings.js"></script>
         <script src="js/todolist.js"></script>
         <script src="js/bg.js"></script>
+        <script src="js/weather.js"></script>
     </body>
 </html>
